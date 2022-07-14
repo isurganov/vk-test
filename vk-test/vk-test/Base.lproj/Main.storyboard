@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--VkontakteVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="VkontakteVC" customModule="vk_test" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Сервисы VK" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ztE-B9-2kv">
+                                <rect key="frame" x="0.0" y="64" width="414" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="kPx-72-rV0">
+                                <rect key="frame" x="20" y="96" width="374" height="766"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="VKCell" rowHeight="67" id="nL5-Dj-PwJ" customClass="VKCell" customModule="vk_test" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="374" height="67"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nL5-Dj-PwJ" id="3TA-kR-Fb9">
+                                            <rect key="frame" x="0.0" y="0.0" width="345.5" height="67"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Вконтакте" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Os-nU-pl7">
+                                                    <rect key="frame" x="93" y="9" width="133" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Самая популярная соцсеть и первое суперприложение в  России" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tvP-dz-XEL">
+                                                    <rect key="frame" x="93" y="30" width="220" height="32"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="32" id="as2-UH-o7n"/>
+                                                        <constraint firstAttribute="width" constant="220" id="t3I-zM-9iV"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="adJ-WN-V4h">
+                                                    <rect key="frame" x="20" y="4" width="60" height="60"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="8Os-nU-pl7" firstAttribute="leading" secondItem="adJ-WN-V4h" secondAttribute="trailing" constant="13" id="ClP-3Q-WDy"/>
+                                                <constraint firstItem="tvP-dz-XEL" firstAttribute="top" secondItem="8Os-nU-pl7" secondAttribute="bottom" id="FSI-t8-QI6"/>
+                                                <constraint firstItem="adJ-WN-V4h" firstAttribute="top" secondItem="3TA-kR-Fb9" secondAttribute="top" constant="4" id="Jgq-aJ-TGg"/>
+                                                <constraint firstAttribute="bottom" secondItem="tvP-dz-XEL" secondAttribute="bottom" constant="5" id="PUC-h6-HbI"/>
+                                                <constraint firstAttribute="bottom" secondItem="adJ-WN-V4h" secondAttribute="bottom" constant="3" id="SvV-bL-ksA"/>
+                                                <constraint firstItem="8Os-nU-pl7" firstAttribute="leading" secondItem="adJ-WN-V4h" secondAttribute="trailing" constant="13" id="Wij-tP-NfE"/>
+                                                <constraint firstItem="adJ-WN-V4h" firstAttribute="leading" secondItem="3TA-kR-Fb9" secondAttribute="leading" constant="20" symbolic="YES" id="Xee-sp-3lE"/>
+                                                <constraint firstItem="tvP-dz-XEL" firstAttribute="leading" secondItem="adJ-WN-V4h" secondAttribute="trailing" constant="13" id="bM1-IS-u0j"/>
+                                                <constraint firstAttribute="bottom" secondItem="tvP-dz-XEL" secondAttribute="bottom" constant="5" id="baJ-iQ-rjT"/>
+                                                <constraint firstAttribute="trailing" secondItem="tvP-dz-XEL" secondAttribute="trailing" constant="32.5" id="fUL-qJ-sbq"/>
+                                                <constraint firstItem="tvP-dz-XEL" firstAttribute="top" secondItem="8Os-nU-pl7" secondAttribute="bottom" id="fvi-3u-CZD"/>
+                                                <constraint firstAttribute="trailing" secondItem="tvP-dz-XEL" secondAttribute="trailing" constant="32.5" id="nCW-je-hSR"/>
+                                                <constraint firstItem="tvP-dz-XEL" firstAttribute="leading" secondItem="adJ-WN-V4h" secondAttribute="trailing" constant="13" id="rB6-5L-2j9"/>
+                                                <constraint firstItem="tvP-dz-XEL" firstAttribute="top" secondItem="8Os-nU-pl7" secondAttribute="bottom" id="yTk-bM-NLo"/>
+                                                <constraint firstItem="8Os-nU-pl7" firstAttribute="top" secondItem="3TA-kR-Fb9" secondAttribute="top" constant="9" id="zc3-nA-MK6"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="appImage" destination="adJ-WN-V4h" id="YYK-Tk-dKx"/>
+                                            <outlet property="labelInfo" destination="tvP-dz-XEL" id="YUc-to-quN"/>
+                                            <outlet property="labelName" destination="8Os-nU-pl7" id="W4y-dr-gEa"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="kPx-72-rV0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Nez-ir-BqE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ztE-B9-2kv" secondAttribute="trailing" id="Psj-lW-A0M"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kPx-72-rV0" secondAttribute="trailing" constant="20" id="ZHK-ER-ybZ"/>
+                            <constraint firstItem="ztE-B9-2kv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="c7L-eE-1SR"/>
+                            <constraint firstItem="kPx-72-rV0" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="fxc-YG-kMh"/>
+                            <constraint firstItem="ztE-B9-2kv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="jNS-lV-Vbd"/>
+                            <constraint firstItem="kPx-72-rV0" firstAttribute="top" secondItem="ztE-B9-2kv" secondAttribute="bottom" constant="8" symbolic="YES" id="ndS-R3-L0N"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="itemsTable" destination="kPx-72-rV0" id="HCB-2P-OV5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="93.75"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
