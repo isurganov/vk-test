@@ -7,6 +7,7 @@
     <li>
       <a href="#about-the-project">About The Project</a>
     </li>
+    <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#demo">Demo</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -24,6 +25,16 @@
 
 В качестве технического стека были взяты Storyboards без сторонних библиотек для разработки приложения в сжатые сроки. 
 
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+<!-- ROADMAP -->
+## Roadmap
+
+- [x] Основные функции приложения 
+- [x] README
+- [] Тесты
+- [] Programmatic ui вместо Stroryboards 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
