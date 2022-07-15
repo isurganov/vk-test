@@ -48,6 +48,7 @@ class VkontakteVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
             cell.updateCell(app: items[indexPath.row])
             cell.backgroundColor = .black
             cell.labelInfo.adjustsFontSizeToFitWidth = true
+            cell.appImage.clipsToBounds = true
             return cell
         }
         return UITableViewCell()
