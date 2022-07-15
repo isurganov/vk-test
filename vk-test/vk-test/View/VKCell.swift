@@ -2,7 +2,7 @@
 //  VKCell.swift
 //  vk-test
 //
-//  Created by Иван Трубецкой on 13.07.2022.
+//  Created by Иван Сурганов on 13.07.2022.
 //
 
 import UIKit

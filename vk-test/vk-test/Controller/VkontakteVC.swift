@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  vk-test
 //
-//  Created by Иван Трубецкой on 13.07.2022.
+//  Created by Иван Сурганов on 13.07.2022.
 //
 
 import UIKit
@@ -25,10 +25,7 @@ class VkontakteVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
     
     func getData() {
         NetworkService.shared.getData { (services) in
-            debugPrint(services.body.services.count)
-            let fitems = services.body.services
-            debugPrint(fitems.count)
-            self.items = fitems
+            self.items = services.body.services
             DispatchQueue.main.async {
                 self.itemsTable.reloadData()
             }
@@ -50,6 +47,7 @@ class VkontakteVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
         if let cell = tableView.dequeueReusableCell(withIdentifier: "VKCell") as? VKCell {
             cell.updateCell(app: items[indexPath.row])
             cell.backgroundColor = .black
+            cell.labelInfo.adjustsFontSizeToFitWidth = true
             return cell
         }
         return UITableViewCell()
@@ -60,9 +58,13 @@ class VkontakteVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let url = URL(string: items[indexPath.row].link)!
-        let vc = SFSafariViewController(url: url)
-        present(vc, animated: true, completion: nil)
+        let application = UIApplication.shared
+        if let url = URL(string: "\(items[indexPath.row].name)://"), application.canOpenURL(url) {
+            application.open(url, options: [:], completionHandler: nil)
+        } else if let itunesUrl = URL(string: items[indexPath.row].link), application.canOpenURL(itunesUrl) {
+            let vc = SFSafariViewController(url: URL(string: items[indexPath.row].link)!)
+            present(vc, animated: true, completion: nil)
+        }
         tableView.deselectRow(at: indexPath, animated: true)
     }
 }

@@ -2,7 +2,7 @@
 //  VK.swift
 //  vk-test
 //
-//  Created by Иван Трубецкой on 13.07.2022.
+//  Created by Иван Сурганов on 13.07.2022.
 //
 
 import Foundation
@@ -21,8 +21,4 @@ struct Services: Codable {
     let description: String
     let link: String
     let icon_url: String
-    
-    func getURL() -> String {
-        return link
-    }
 }
