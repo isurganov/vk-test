@@ -34,7 +34,7 @@
 - [x] Основные функции приложения 
 - [x] README
 - [] Тесты
-- [] Programmatic ui вместо Stroryboards 
+- [] Programmatic UI вместо Stroryboards 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
